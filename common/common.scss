@@ -23,16 +23,16 @@
 .fk-d-tooltip__content {
 /* display: block !important; */
 /* overflow: hidden !important; */
-  max-height: 600px !important;
-  width: auto !important;
+/* max-height: 600px !important; */
+  width: auto;
 }
 
 .fk-d-tooltip__inner-content {
     /* display: flex !important; */
     /* flex-direction: column !important; */
-    align-items: normal !important;
+    /* align-items: normal !important; */
     overflow: auto !important;
-    overflow-wrap: break-word !important;
+    /* overflow-wrap: break-word !important; */
     /* padding: .5rem !important; */
 }
 
