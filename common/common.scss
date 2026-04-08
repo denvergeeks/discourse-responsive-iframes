@@ -1,1 +1,60 @@
-// Theme's SCSS
+/* DISCOURSE RESPONSIVE IFRAMES */
+
+/* Inside Topic Content (.cooked) */
+.cooked .responsive-iframe-wrap {
+  width: 100%;
+  max-width: 100%;
+  aspect-ratio: var(--iframe-ratio, 16 / 9);
+  position: relative;
+  overflow: hidden;
+}
+
+.cooked .responsive-iframe {
+  display: block;
+  width: 100% !important;
+  max-width: 100% !important;
+  height: 100% !important;
+  border: 0;
+  box-sizing: border-box;
+}
+
+/* Inside Float Kit Tooltips */
+
+.fk-d-tooltip__inner-content {
+    display: flex;
+    flex-direction: column;
+    align-items: normal;
+    overflow: auto;
+    overflow-wrap: break-word;
+    padding: .5rem;
+}
+
+.fk-d-tooltip__inner-content.inline-tip-content {
+    display: inline-block;
+    overflow: hidden;
+    overflow-wrap: break-word;
+    padding: .5rem;
+    align-items: center;
+}
+
+.fk-d-tooltip__content {
+  overflow-wrap: break-word;
+  font-size: var(--font-down-1);
+  display: block;
+  max-height: 600px;
+  width: auto;
+
+  .fk-d-tooltip__content .fk-d-tooltip__inner-content {
+    display: block;
+    width: min(90vw, 700px);
+    width: 100%;
+  }
+
+  iframe {
+    display: block;
+    width: 100%;
+    width: min(90vw, 700px);
+    aspect-ratio: var(--iframe-ratio, 16 / 9);
+    border: 0;
+  }
+}
