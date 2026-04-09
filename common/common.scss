@@ -19,48 +19,6 @@
 }
 
 /* Inside Float Kit Tooltips */
-
-.fk-d-tooltip__content {
-/* display: block !important; */
-/* overflow: hidden !important; */
-/* max-height: 600px !important; */
-/* width: auto; */
-}
-
-.fk-d-tooltip__inner-content {
-    /* display: flex !important; */
-    /* flex-direction: column !important; */
-    /* align-items: normal !important; */
-/* overflow: auto !important; */
-    /* overflow-wrap: break-word !important; */
-    /* padding: .5rem !important; */
-}
-
-/*
-.fk-d-tooltip__inner-content.inline-tip-content {
-    display: inline-block !important;
-    overflow: hidden !important;
-    overflow-wrap: break-word !important;
-    padding: .5rem !important;
-    align-items: center !important;
-}
-*/
-/*
-.fk-d-tooltip__content {
-  overflow-wrap: break-word !important;
-  font-size: var(--font-down-1) !important;
-  display: block !important;
-overflow: hidden !important;
-  max-height: 600px !important;
-  width: auto !important;
-
-  .fk-d-tooltip__content .fk-d-tooltip__inner-content {
-    display: block !important;
-    width: min(90vw, 700px) !important;
-    width: 100% !important;
-  }
-*/
-
   iframe {
     display: block !important;
     width: 100% !important;
@@ -69,4 +27,3 @@ overflow: hidden !important;
     aspect-ratio: var(--iframe-ratio, 16 / 9) !important;
     border: 0 !important;
   }
-/* } */
