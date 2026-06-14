@@ -4,6 +4,13 @@ export default apiInitializer((api) => {
   api.decorateCookedElement(
     (cooked) => {
       cooked.querySelectorAll("iframe").forEach((iframe) => {
+        if (
+          iframe.classList.contains("autoscale-iframe") ||
+          iframe.closest(".autoscale-iframe-wrap")
+        ) {
+          return;
+        }
+
         if (iframe.closest(".responsive-iframe-wrap")) {
           return;
         }
