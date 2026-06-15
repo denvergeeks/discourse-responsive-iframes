@@ -1,5 +1,16 @@
 import { apiInitializer } from "discourse/lib/api";
 
+function getIframeRatio(iframe) {
+  const width = parseFloat(iframe.getAttribute("width"));
+  const height = parseFloat(iframe.getAttribute("height"));
+
+  if (width > 0 && height > 0) {
+    return `${width} / ${height}`;
+  }
+
+  return "16 / 9";
+}
+
 export default apiInitializer((api) => {
   api.decorateCookedElement(
     (cooked) => {
@@ -12,28 +23,24 @@ export default apiInitializer((api) => {
         }
 
         if (iframe.closest(".responsive-iframe-wrap")) {
+          iframe.classList.add("responsive-iframe");
           return;
         }
 
         if (iframe.closest(".fk-d-tooltip__inner-content")) {
           iframe.classList.add("responsive-iframe");
+          iframe.removeAttribute("width");
+          iframe.removeAttribute("height");
           return;
         }
 
         const wrapper = document.createElement("div");
         wrapper.className = "responsive-iframe-wrap";
-
-        const width = parseFloat(iframe.getAttribute("width"));
-        const height = parseFloat(iframe.getAttribute("height"));
-
-        if (width > 0 && height > 0) {
-          wrapper.style.setProperty("--iframe-ratio", `${width} / ${height}`);
-        } else {
-          wrapper.style.setProperty("--iframe-ratio", "16 / 9");
-        }
+        wrapper.style.setProperty("--iframe-ratio", getIframeRatio(iframe));
 
         iframe.parentNode.insertBefore(wrapper, iframe);
         wrapper.appendChild(iframe);
+
         iframe.classList.add("responsive-iframe");
         iframe.removeAttribute("width");
         iframe.removeAttribute("height");
