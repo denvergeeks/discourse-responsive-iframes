@@ -2,32 +2,27 @@
 
 /* Inside Topic Content (.cooked) */
 .cooked .responsive-iframe-wrap {
-  width: 100% !important;
-  max-width: 100% !important;
-  aspect-ratio: 16 / 9;
-  position: relative !important;
-  overflow: hidden !important;
+  position: relative;
+  width: 100%;
+  max-width: 100%;
+  overflow: hidden;
+  aspect-ratio: var(--iframe-ratio, 16 / 9);
 }
 
-/*
-
-.cooked .responsive-iframe {
-  display: block !important;
-  width: 100% !important;
-  max-width: 100% !important;
-  height: 100% !important;
-  border: 0 !important;
-  box-sizing: border-box !important;
+.cooked .responsive-iframe-wrap > iframe.responsive-iframe {
+  display: block;
+  width: 100%;
+  height: 100%;
+  border: 0;
+  box-sizing: border-box;
 }
-
-*/
 
 /* Inside Float Kit Tooltips */
-  iframe {
-    display: block !important;
-    width: 100%;
-    margin: 0 !important;
-        /* width: min(90vw, 700px); */
-    aspect-ratio: 16 / 9;
-    border: 0 !important;
-  }
+.fk-d-tooltip__inner-content > iframe.responsive-iframe {
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  margin: 0;
+  aspect-ratio: 16 / 9;
+  border: 0;
+}
