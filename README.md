@@ -4,4 +4,5 @@ A Theme Component for Discourse Forums that makes the Iframes responsive and app
 
 Applies to all Iframes tagged <iframe></iframe> in Topic content, and also including Iframes inside Float Kit Tooltips (i.e. in Inline Footnotes, Inline Tooltips, Linkify Words, etc.) sitewide.
 
-<img width="562" height="623" alt="discourse-responsive-iframes-theme-component" src="https://github.com/user-attachments/assets/e844dcc6-3d22-45e4-a264-d410adea642f" />
+<img width="565" height="609" alt="discourse-responsive-iframes-theme-component" src="https://github.com/user-attachments/assets/1fdee19f-aef5-42cf-9ccd-8db490a7e167" />
+
